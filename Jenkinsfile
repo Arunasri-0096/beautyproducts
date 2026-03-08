@@ -3,9 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Git Clone') {
+        stage('Git Checkout') {
             steps {
-                git branch 'main',https://github.com/Arunasri-0096/beautyproducts.git'
+                git branch 'main', url: 'https://github.com/Arunasri-0096/beautyproducts.git'
             }
         }
 
@@ -17,19 +17,13 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t yourdockerhub/beautyproducts .'
-            }
-        }
-
-        stage('Docker Push') {
-            steps {
-                sh 'docker push yourdockerhub/beautyproducts'
+                sh 'docker build -t beautyproducts .'
             }
         }
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 8085:8080 yourdockerhub/beautyproducts'
+                sh 'docker run -d -p 8090:8080 beautyproducts'
             }
         }
 
