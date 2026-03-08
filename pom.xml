@@ -1,14 +1,3 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0">
-
-<modelVersion>4.0.0</modelVersion>
-
-<groupId>com.devops</groupId>
-<artifactId>beautyproducts</artifactId>
-<version>1.0</version>
-<packaging>war</packaging>
-
-<name>beautyproducts</name>
-
 <build>
     <finalName>beautyproducts</finalName>
 
@@ -18,10 +7,11 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
             <version>3.3.2</version>
+            <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
         </plugin>
 
     </plugins>
 
 </build>
-
-</project>
