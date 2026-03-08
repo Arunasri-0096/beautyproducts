@@ -7,8 +7,21 @@
 <version>1.0</version>
 <packaging>war</packaging>
 
+<name>beautyproducts</name>
+
 <build>
-<finalName>beautyproducts</finalName>
+    <finalName>beautyproducts</finalName>
+
+    <plugins>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.2</version>
+        </plugin>
+
+    </plugins>
+
 </build>
 
 </project>
