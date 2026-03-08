@@ -5,7 +5,7 @@ pipeline {
 
         stage('Git Clone') {
             steps {
-                git 'https://github.com/yourusername/beauty-products-devops.git'
+                git branch 'main',https://github.com/Arunasri-0096/beautyproducts.git'
             }
         }
 
